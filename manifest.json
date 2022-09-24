@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Penny Tracker",
+    "description": "Create and track a budget plan, and save that penny with our product recommendations",
+    "version": "0.0.1",
+    "icons": {
+        "16": "src/assets/images/penny_saver16.png",
+        "48": "src/assets/images/penny_saver48.png",
+        "128": "src/assets/images/penny_saver128.png"
+    },
+    "options_page": "settings.html",
+    "action": {
+        "default_title": "Penny Tracker",
+        "default_popup": "popup/popup.html"
+    },
+    "permissions": ["tabs", "webNavigation", "storage"],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "css": ["app.css"],
+        "js": ["app.js"],
+        "matches": ["https://github.com/*"],
+        "all_frames": true
+    }]
+}
