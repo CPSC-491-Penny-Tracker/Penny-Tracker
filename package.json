@@ -1,0 +1,22 @@
+{
+  "name": "penny-tracker",
+  "version": "1.0.0",
+  "description": "Create and track a budget plan, and save that penny with our product recommendations",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CPSC-491-Penny-Tracker/Penny-Tracker.git"
+  },
+  "keywords": [
+    "async"
+  ],
+  "author": "Mahmoud Khafagy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CPSC-491-Penny-Tracker/Penny-Tracker/issues"
+  },
+  "homepage": "https://github.com/CPSC-491-Penny-Tracker/Penny-Tracker#readme"
+}

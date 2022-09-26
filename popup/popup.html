@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="popup.css">
-    <title>Penny Saver</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../app.js" defer></script>
+  <script type="module" src="../src/planner.js" defer></script>
+  <script type="module" src="../src/product.js" defer></script>
+  <script type="module" src="../src/summary.js" defer></script>
+  <script type="text/jsx" src="../src/users.js" defer></script>
+
+
+  <link rel="stylesheet" href="popup.css">
+
+  <title>Penny Tracker</title>
 </head>
 <body>
-    This is the <span class="special-text">HTML</span> body of the addon.
-    NOW
-    LETS GET NASTY
+  <ul class="tabs">
+    <li data-tab-target="#planner" class="active tab">Planner</li>
+    <li data-tab-target="#compare" class="tab">Compare</li>
+    <li data-tab-target="#summary" class="tab">Summary</li>
+    <li data-tab-target="#profile" class="tab">Profile</li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="planner" data-tab-content class="active">
+        <h1>Planner</h1>
+        <p>This is the Planner</p>
+    </div>
+    <div id="compare" data-tab-content>
+        <h1>Compare</h1>
+        <p>Some information on Compare</p>
+    </div>
+    <div id="summary" data-tab-content>
+        <h1>Summary</h1>
+        <p>Let me tell you about Summary</p>
+    </div>
+    <div id="profile" data-tab-content>
+        <h1>Profile</h1>
+        <p>Let me tell you about Profile</p>
+    </div>
+  </div>
+
 </body>
 </html>
