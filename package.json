@@ -1,22 +1,19 @@
 {
-  "name": "penny-tracker",
-  "version": "1.0.0",
-  "description": "Create and track a budget plan, and save that penny with our product recommendations",
-  "main": "app.js",
+  "name": "react-chrome-extension",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.7.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "react": "^16.14.0",
+    "react-dom": "^16.8.4"
+  },
   "scripts": {
-    "start": "node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CPSC-491-Penny-Tracker/Penny-Tracker.git"
-  },
-  "keywords": [
-    "async"
-  ],
-  "author": "Mahmoud Khafagy",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CPSC-491-Penny-Tracker/Penny-Tracker/issues"
-  },
-  "homepage": "https://github.com/CPSC-491-Penny-Tracker/Penny-Tracker#readme"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }
