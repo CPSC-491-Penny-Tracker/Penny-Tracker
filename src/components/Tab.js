@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { render } from "react-dom";
 import "./tab.css";
 
 const Tab = () => {
@@ -9,30 +8,38 @@ const Tab = () => {
   return (
     <React.Fragment>
       <div className="tabs">
-        <button
-          className={`tab ${checkActive(1, "active")}`}
-          onClick={() => handleClick(1)}
-        >
-          Planner
-        </button>
-        <button
-          className={`tab ${checkActive(2, "active")}`}
-          onClick={() => handleClick(2)}
-        >
-          Compare
-        </button>
-        <button
-          className={`tab ${checkActive(3, "active")}`}
-          onClick={() => handleClick(3)}
-        >
-          Summary
-        </button>
-        <button
-          className={`tab ${checkActive(4, "active")}`}
-          onClick={() => handleClick(4)}
-        >
-          Profile
-        </button>
+        <div className="tab-tab">
+            <button
+              className={`tab ${checkActive(1, "active")}`}
+                onClick={() => handleClick(1)}
+            >
+            <label for="tab-1">Planner</label>
+            </button>
+        </div>
+        <div className="tab-tab">
+          <button
+            className={`tab ${checkActive(2, "active")}`}
+            onClick={() => handleClick(2)}
+          >
+            <label for="tab-2">Compare</label>
+          </button>
+        </div>
+        <div className="tab-tab">
+          <button
+            className={`tab ${checkActive(3, "active")}`}
+            onClick={() => handleClick(3)}
+          >
+            <label for="tab-3">Summary</label>
+          </button>
+        </div>
+        <div className="tab-tab">
+          <button
+            className={`tab ${checkActive(4, "active")}`}
+            onClick={() => handleClick(4)}
+          >
+            Profile
+          </button>
+        </div>
       </div>
       <div className="panels">
         <div className={`panel ${checkActive(1, "active")}`}>
