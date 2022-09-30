@@ -1,5 +1,5 @@
 import React from 'react';
-import './planner.js'
+import Planner from './planner.js'
 import './product.js'
 import './summary.js'
 import './users.js'
@@ -10,6 +10,7 @@ const App = () => {
   return (
     <div className="App">
       <Tabs />
+      <Planner />
     </div>
   );
 }

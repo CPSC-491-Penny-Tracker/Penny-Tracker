@@ -43,7 +43,7 @@ const Tab = () => {
       </div>
       <div className="panels">
         <div className={`panel ${checkActive(1, "active")}`}>
-          <p>Your budget plan</p>
+          <h1>Your budget plan</h1>
         </div>
         <div className={`panel ${checkActive(2, "active")}`}>
           <p>Product prices</p>
