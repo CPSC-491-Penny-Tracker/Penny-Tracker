@@ -1,10 +1,15 @@
 {
   "manifest_version": 2,
 
-  "name": "Demo React-Chrome extension",
+  "name": "Penny Tracker",
   "description": "This extension shows how to run a React app as a Chrome extension",
   "version": "1.0",
-
+  "permissions": [
+    "background",
+    "browsingData",
+    "cookies",
+    "search"
+  ],
   "browser_action": {
     "default_icon": "penny_saver128.png",
     "default_popup": "index.html"

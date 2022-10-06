@@ -4,3 +4,20 @@ body {
   position: relative;
   vertical-align:middle;
 }
+.panel {
+  display: none;
+  background-color: #ffffff;
+  padding: 10px;
+}
+.panel.active {
+  display: block;
+}
+p {
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
