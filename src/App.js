@@ -13,7 +13,7 @@ const App = () => {
       <Tabs />
       <main className="panels">
         <Routes>
-          <Route exact path='/' element={<Planner/>}/>\
+          <Route exact path='/' element={<Planner/>}/>
           <Route path='/product' element={<Product/>}/>
           <Route path='/summary' element={<Summary/>}/>
           <Route path='/login' element={<Login/>}/>
