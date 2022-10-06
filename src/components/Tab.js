@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./tab.css";
+import Planner from "../planner";
 
 const Tab = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -44,6 +45,7 @@ const Tab = () => {
       <div className="panels">
         <div className={`panel ${checkActive(1, "active")}`}>
           <h1>Your budget plan</h1>
+          <Planner />
         </div>
         <div className={`panel ${checkActive(2, "active")}`}>
           <p>Product prices</p>
