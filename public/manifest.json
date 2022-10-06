@@ -4,7 +4,12 @@
   "name": "Penny Tracker",
   "description": "On a tight budget? Check us out! With Penny Tracker you can track your spending and save so much money buying goods online",
   "version": "1.0",
-
+  "permissions": [
+    "background",
+    "browsingData",
+    "cookies",
+    "search"
+  ],
   "browser_action": {
     "default_icon": "penny_saver128.png",
     "default_popup": "index.html"

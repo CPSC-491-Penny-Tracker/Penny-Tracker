@@ -1,17 +1,25 @@
 import React from 'react';
-import Planner from './planner.js'
-import './product.js'
-import './summary.js'
-import './users.js'
+import { Route, Routes, Redirect } from 'react-router-dom';
+import Summary from './routes/summary';
+import Planner from './routes/planner';
+import Product from './routes/product';
+import Login from './routes/login';
 import './App.css';
 import Tabs from "./components/Tab";
 
 const App = () => {
   return (
-    <div className="App">
+    <React.Fragment>
       <Tabs />
-      <Planner />
-    </div>
+      <main className="panels">
+        <Routes>
+          <Route exact path='/' element={<Planner/>}/>
+          <Route path='/product' element={<Product/>}/>
+          <Route path='/summary' element={<Summary/>}/>
+          <Route path='/login' element={<Login/>}/>
+        </Routes>  
+      </main>
+  </React.Fragment>
   );
 }
 
