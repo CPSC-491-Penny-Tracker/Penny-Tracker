@@ -1,8 +1,8 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
-  "name": "Demo React-Chrome extension",
-  "description": "This extension shows how to run a React app as a Chrome extension",
+  "name": "Penny Tracker",
+  "description": "On a tight budget? Check us out! With Penny Tracker you can track your spending and save so much money buying goods online",
   "version": "1.0",
 
   "browser_action": {
