@@ -1,51 +1,46 @@
 import React, { useState } from "react";
-import { render } from "react-dom";
+import { useNavigate } from "react-router-dom";
 import "./tab.css";
 
 const Tab = () => {
   const [activeIndex, setActiveIndex] = useState(1);
-  const handleClick = (index) => setActiveIndex(index);
+  const navigate = useNavigate();
+  const handleClick = (route) => navigate(`/${route}`);
   const checkActive = (index, className) => activeIndex === index ? className : "";
   return (
     <React.Fragment>
       <div className="tabs">
-        <button
-          className={`tab ${checkActive(1, "active")}`}
-          onClick={() => handleClick(1)}
-        >
-          Planner
-        </button>
-        <button
-          className={`tab ${checkActive(2, "active")}`}
-          onClick={() => handleClick(2)}
-        >
-          Compare
-        </button>
-        <button
-          className={`tab ${checkActive(3, "active")}`}
-          onClick={() => handleClick(3)}
-        >
-          Summary
-        </button>
-        <button
-          className={`tab ${checkActive(4, "active")}`}
-          onClick={() => handleClick(4)}
-        >
-          Profile
-        </button>
-      </div>
-      <div className="panels">
-        <div className={`panel ${checkActive(1, "active")}`}>
-          <p>Your budget plan</p>
+        <div className="tab-tab">
+            <button
+              className={`tab ${checkActive(1, "active")}`}
+                onClick={()=>handleClick('')}
+            >
+            <label for="tab-1">Planner</label>
+            </button>
         </div>
-        <div className={`panel ${checkActive(2, "active")}`}>
-          <p>Product prices</p>
+        <div className="tab-tab">
+          <button
+            className={`tab ${checkActive(2, "active")}`}
+            onClick={()=>handleClick('product')}
+          >
+            <label for="tab-2">Compare</label>
+          </button>
         </div>
-        <div className={`panel ${checkActive(3, "active")}`}>
-          <p>Your summary</p>
+        <div className="tab-tab">
+          <button
+            className={`tab ${checkActive(3, "active")}`}
+            onClick={()=>handleClick('summary')}
+          >
+            <label for="tab-3">Summary</label>
+          </button>
         </div>
-        <div className={`panel ${checkActive(4, "active")}`}>
-          <p>Sign in</p>
+        <div className="tab-tab">
+          <button
+            className={`tab ${checkActive(4, "active")}`}
+            onClick={()=>handleClick('login')}
+          >
+            Profile
+          </button>
         </div>
       </div>
     </React.Fragment>
