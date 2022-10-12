@@ -10,7 +10,7 @@
     "cookies",
     "search"
   ],
-  "browser_action": {
+  "action": {
     "default_icon": "penny_saver128.png",
     "default_popup": "index.html"
   }

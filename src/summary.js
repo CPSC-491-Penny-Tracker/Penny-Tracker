@@ -48,7 +48,7 @@ export default Summary = () => {
 
   const summaryPost = async () => {
     let errorDetected = false
-    
+  }
   return (
     <React.Fragment>
       <div className='tabs'>
