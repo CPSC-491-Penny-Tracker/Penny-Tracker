@@ -116,7 +116,7 @@ const Summary = () => {
               control={
                 <input
                   onChange={handleStoreChange}
-                  value='23000'
+                  value='$23,000'
                   type="checkbox"
                   name='types'
                   aria-label='amazon'
@@ -133,7 +133,7 @@ const Summary = () => {
               control={
                 <input
                   onChange={handleStoreChange}
-                  value='10000'
+                  value='$15,000'
                   type="checkbox"
                   name='types'
                   aria-label='bestBuy'
@@ -150,7 +150,7 @@ const Summary = () => {
               control={
                 <input
                   onChange={handleStoreChange}
-                  value='5000'
+                  value='$5,000'
                   type="checkbox"
                   name='types'
                   aria-label='ebay'
@@ -167,7 +167,7 @@ const Summary = () => {
               control={
                 <input
                   onChange={handleStoreChange}
-                  value='10000'
+                  value='$10,000'
                   type="checkbox"
                   name='types'
                   aria-label='target'
