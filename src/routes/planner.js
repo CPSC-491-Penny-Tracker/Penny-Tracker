@@ -10,10 +10,21 @@ const Planner = () => {
     setStore('')
   }
 
+
+
   const changeStore = (newStore) => {
     //saves budget to store
+    //chrome.storage.local.set({store: budget}, function(){})
+    //chrome.storage.local.get([store], function(result){console.log(result.key)})
+    localStorage.setItem(store, budget)
+    const result = localStorage.getItem(store)
+    console.log(result)
     //sets budget to default
-    setBudget('0') 
+    const bud = localStorage.getItem(newStore)
+    if(bud==null)
+      document.getElementById("budget").value = "";
+    else
+      setBudget(bud) 
     //sets store to selected store
     setStore(newStore)
   }  
@@ -43,7 +54,7 @@ const Planner = () => {
       <form name="budget">
         <label form="budget">
           Budget: $
-          <input type="number" name="budget" value={budget} onChange={(event) => setBudget(event.target.value)} />
+          <input type="number" id="budget" name="budget" value={budget} onChange={(event) => setBudget(event.target.value)} />
         </label>
         <h3>Your budget is: {budget}</h3>
       </form>
