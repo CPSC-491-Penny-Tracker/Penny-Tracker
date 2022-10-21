@@ -37,7 +37,7 @@ const Tab = () => {
         <div className="tab-tab">
           <button
             className={`tab ${checkActive(4, "active")}`}
-            onClick={()=>handleClick('login')}
+            onClick={()=>handleClick('dashboard')}
           >
             Profile
           </button>

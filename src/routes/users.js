@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { useNavigate } from "react-router-dom";
 import UserContext from '../context/UserContext'
 
-export default function login() {
+export default function user() {
     const context = useContext(UserContext)
     const navigate = useNavigate();
     const login = event => {
