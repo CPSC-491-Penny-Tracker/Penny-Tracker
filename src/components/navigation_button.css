@@ -1,0 +1,11 @@
+.wrapper {
+    background: var(--primary-color);
+    border: none;
+    color: var(--text-color);
+    font-size: 1em;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 20px;
+}

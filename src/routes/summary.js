@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { TextField } from '@material-ui/core'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import FiberManualRecord from '@material-ui/icons/FiberManualRecord'
+import './summary.css'
 import Radio from '@material-ui/core/Radio'
 //import './summary.css'
 
@@ -104,10 +105,10 @@ const Summary = () => {
   return (
     <React.Fragment>
       <div className="summary">
-        <div className="noStore">
+        <div className="store">
           <h2>{noStore}</h2>
           <h3>
-            <small>Store</small>
+            <small>Choose your Store(s)</small>
           </h3>
         </div>
         <div>
@@ -116,7 +117,7 @@ const Summary = () => {
               control={
                 <input
                   onChange={handleStoreChange}
-                  value='23000'
+                  value='$23,000'
                   type="checkbox"
                   name='types'
                   aria-label='amazon'
@@ -133,7 +134,7 @@ const Summary = () => {
               control={
                 <input
                   onChange={handleStoreChange}
-                  value='10000'
+                  value='$15,000'
                   type="checkbox"
                   name='types'
                   aria-label='bestBuy'
@@ -150,7 +151,7 @@ const Summary = () => {
               control={
                 <input
                   onChange={handleStoreChange}
-                  value='5000'
+                  value='$5,000'
                   type="checkbox"
                   name='types'
                   aria-label='ebay'
@@ -167,7 +168,7 @@ const Summary = () => {
               control={
                 <input
                   onChange={handleStoreChange}
-                  value='10000'
+                  value='$10,000'
                   type="checkbox"
                   name='types'
                   aria-label='target'
@@ -180,11 +181,7 @@ const Summary = () => {
         </div>
 
         <form name="Total">
-          <label form="TotalSpending">
-            Total Spending: $
-            <input type="number" name="TotalSpending" value={data.store} onChange={handleStoreChange} />
-          </label>
-          <h3>Your total spending is: {data.store}</h3>
+          <h3>Your total spending is: ${data.store}</h3>
         </form>
 
       </div>
