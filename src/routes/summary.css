@@ -1,0 +1,24 @@
+.summary{
+    position:relative;
+    left: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.store{
+    background-color: rgb(233, 151, 44);
+    border-bottom-left-radius: 30px 25px;
+    border-bottom-right-radius: 30px 25px;
+    text-align: center;
+    font-size: 25px;
+    padding: 1px;
+}
+.checkbox{
+    position:relative;
+    top: 15px;
+    left:20px;
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    accent-color: rgb(0, 0, 0);
+    border: none;
+    cursor:pointer
+}

@@ -1,0 +1,18 @@
+.container {
+    text-align: center;
+}
+input[type=button] {
+  background:none;
+  border:none;
+  color:#FFF;
+  font-family:Verdana, Geneva, sans-serif;
+  cursor:pointer;
+}
+
+input[type=button].img {
+  border-radius: 50%;
+}
+
+.button:disabled {
+  background: #ffe19494;
+}
