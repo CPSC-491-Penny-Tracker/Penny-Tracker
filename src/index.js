@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { UserProvider }from './context/UserContext';
 import App from './App';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <UserProvider>

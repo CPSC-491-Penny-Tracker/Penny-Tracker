@@ -47,13 +47,14 @@ export class UserProvider extends Component {
 
   processLogin = authToken => {
     JwtService.saveAuthToken(authToken);
-    // const jwtPayload = JwtService.parseAuthToken();
+    const jwtPayload = JwtService.parseAuthToken();
     this.setUser({
-      username: authToken
+      username: jwtPayload.sub
     });
-    // JwtService.queueCallbackBeforeExpiry(() => {
-    //   this.fetchRefreshToken();
-    // });
+    console.log(jwtPayload, 'payload')
+    JwtService.queueCallbackBeforeExpiry(() => {
+      this.fetchRefreshToken();
+    });
   };
 
   processLogout = () => {

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Route, Routes, Outlet, Redirect, useParams } from 'react-router-dom';
+import { Route, Routes, Outlet, Navigate, Redirect, useParams } from 'react-router-dom';
 import Summary from './routes/summary';
 import Planner from './routes/planner';
 import Product from './routes/product';
 import Dashboard from './routes/dashboard';
+import Registration from './routes/registration';
 import JwtService from './service/JwtService';
 import Users from './routes/users';
 import './App.css';
@@ -22,6 +23,7 @@ const App = () => {
           <Route path='/product' element={<Product/>}/>
           <Route path='/planner' element={<Planner/>}/>
           <Route path='/summary' element={<Summary/>}/>
+          <Route path='/register' element={<Registration />}/>
           <Route path='/dashboard' element={<PrivateRoute/>}>
             <Route path='/dashboard' element={<Dashboard/>}/>
           </Route>
