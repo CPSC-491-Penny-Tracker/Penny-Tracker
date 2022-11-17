@@ -19,13 +19,13 @@ const App = () => {
       <Tabs />
       <main className="panels">
         <Routes>
-          <Route exact path='/' element={<Planner/>}/>
+          <Route exact path='/' element={<Product/>}/>
           <Route path='/product' element={<Product/>}/>
           <Route path='/planner' element={<Planner/>}/>
           <Route path='/summary' element={<Summary/>}/>
           <Route path='/register' element={<Registration />}/>
           <Route path='/dashboard' element={<PrivateRoute/>}>
-            <Route path='/dashboard' element={<Dashboard/>}/>
+            <Route path='/dashboard' element={<Summary/>}/>
           </Route>
           <Route path='/users' element={<Users/>}/>
         </Routes>  
