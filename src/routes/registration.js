@@ -36,6 +36,7 @@ export default function registration() {
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" name='password' required/>
         </Form.Group>
+        <div role="alert" className="text-danger">{error && <p>{error}</p>}</div>
         <Button className="me-3" variant="primary" type="submit">
             Register
         </Button>

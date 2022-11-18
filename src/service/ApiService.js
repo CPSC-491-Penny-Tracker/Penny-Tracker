@@ -2,6 +2,20 @@ import config from '../config';
 import JwtService from './JwtService';
 
 const ApiService = {
+  getProducts(query) {
+    return fetch(`${config.API_ENDPOINT}/search?q=${query}`, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+      }
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(err => Promise.reject(err))
+          : res.json()
+      )
+  },
+
   postUser(user) {
     return fetch(`${config.API_ENDPOINT}/user`, {
       method: 'POST',
