@@ -1,16 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { useNavigate, Link } from "react-router-dom";
 import { TextField } from '@material-ui/core'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import FiberManualRecord from '@material-ui/icons/FiberManualRecord'
 import { makeStyles } from '@material-ui/core/styles'
 import styles from '../components/components'
 import { Button } from 'react-bootstrap'
+import UserContext from '../context/UserContext'
+import Form from 'react-bootstrap/Form';
+import ApiService from '../service/ApiService';
 import './summary.css'
 import Radio from '@material-ui/core/Radio'
 //import './summary.css'
 const useStyles = makeStyles(styles)
 
 const Summary = () => {
+  const context = useContext(UserContext)
+  const navigate = useNavigate();
   const classes = useStyles()
   const [store, setStore] = useState({
     types: [],
@@ -38,6 +44,14 @@ const Summary = () => {
   const handleStoreChange = e => {
     const { value, checked } = e.target
     const { types } = store
+    ApiService.postSummary({
+        total: value.value,
+        store: types.value
+      })
+        .then(res => {
+            context.setSummary(res.authToken);
+            navigate('/dashboard');
+        })
     console.log(`${value} is ${checked}`)
 
     if (checked) {

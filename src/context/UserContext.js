@@ -6,7 +6,8 @@ const UserContext = React.createContext({
   user: {},
   setUser: () => {},
   processLogin: () => {},
-  processLogout: () => {}
+  processLogout: () => {},
+  setSummary: () => {}
 });
 
 export default UserContext;
@@ -45,6 +46,10 @@ export class UserProvider extends Component {
     this.setState({ user });
   };
 
+  setSummary = summary => {
+    this.setState({ summary });
+  };
+
   processLogin = authToken => {
     JwtService.saveAuthToken(authToken);
     const jwtPayload = JwtService.parseAuthToken();
@@ -61,6 +66,18 @@ export class UserProvider extends Component {
     JwtService.clearAuthToken();
     JwtService.clearCallbackBeforeExpiry();
     this.setUser({});
+  };
+
+  processSummary = authToken => {
+    JwtService.saveAuthToken(authToken);
+    const jwtPayload = JwtService.parseAuthToken();
+    this.setSummary({
+      store: jwtPayload.sub
+    });
+    console.log(jwtPayload, 'payload')
+    JwtService.queueCallbackBeforeExpiry(() => {
+      this.fetchRefreshToken();
+    });
   };
 
   logoutBecauseIdle = () => {
@@ -87,7 +104,8 @@ export class UserProvider extends Component {
       user: this.state.user,
       setUser: this.setUser,
       processLogin: this.processLogin,
-      processLogout: this.processLogout
+      processLogout: this.processLogout,
+      setSummary: this.setSummary
     };
 
     return (

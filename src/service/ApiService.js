@@ -16,6 +16,20 @@ const ApiService = {
       )
   },
 
+  postSummary(query) {
+    return fetch(`${config.API_ENDPOINT}/summary?q=${query}`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      }
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(err => Promise.reject(err))
+          : res.json()
+      )
+  },
+
   postUser(user) {
     return fetch(`${config.API_ENDPOINT}/user`, {
       method: 'POST',
