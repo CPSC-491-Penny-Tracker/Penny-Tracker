@@ -4,14 +4,22 @@
   "name": "Penny Tracker",
   "description": "On a tight budget? Check us out! With Penny Tracker you can track your spending and save so much money buying goods online",
   "version": "1.0",
+  "host_permissions": ["https://books.toscrape.com/"],
   "permissions": [
     "background",
     "browsingData",
     "cookies",
-    "search"
+    "search",
+    "scripting",
+    "activeTab",
+    "tabs"
   ],
   "action": {
     "default_icon": "penny_saver128.png",
     "default_popup": "index.html"
+  },
+  "background":{
+    "service_worker": "serviceWorker.js",
+    "type": "module"
   }
 }
