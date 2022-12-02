@@ -262,15 +262,6 @@ const Summary = () => {
             Your total spending for {store.types + ''}: ${totalSpending}
           </h3>
         </form>
-        <Button
-          onClick={() => {
-            summaryPost()
-          }}
-          variant='contained'
-          size='large'
-        >
-          My Total
-        </Button>
       </div>
     </React.Fragment>
   )

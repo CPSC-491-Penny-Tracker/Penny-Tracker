@@ -1,6 +1,7 @@
 .tabs {  
     display: flex;
 }
+
 .tab {  
   justify-content: center;
   text-align: center;
@@ -8,7 +9,7 @@
   align-items: left;
   width: 100px;
   height: 40px;
-  background: rgb(173, 173, 173);
+  background: rgb(201, 200, 200);
   border-left: 1px;
   border-bottom-left-radius:15px;
   border-bottom-right-radius:15px;
@@ -16,10 +17,9 @@
   border-top-right-radius:15px;
   border-bottom: none;
   border-right: none;
-  padding: 1px;
   cursor:pointer;
-  
 }
+
 .tab-tab :hover  {
   background: rgb(247, 245, 246)!important;
   cursor:pointer;
@@ -28,6 +28,7 @@
 .tab:not(:last-child) {
   border-color: 1px solid rgb(138, 133, 133);  
 }
+
 .tab.active {
   background: rgb(247, 245, 246);
   font-size: 17px;
@@ -36,16 +37,18 @@
 
 .log {
   position:absolute;
-  left: 270px;
-  bottom: 5px;
+  left: 335px;
+  bottom: 18px;
 }
+
 .log2{
   position:absolute;
-  left: 360px;
-  bottom: 5px;
+  left: 425px;
+  bottom: 15px;
 }
+
 .log3 {
   position:absolute;
-  left: 430px;
-  bottom: 8px;
+  left: 415px;
+  bottom: 15px;
 }
