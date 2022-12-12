@@ -9,17 +9,39 @@ import Button from 'react-bootstrap/Button';
 import ApiService from "../service/ApiService";
 import Card from "../components/card";
 import Container from 'react-bootstrap/Container';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { withStyles } from "@material-ui/core/styles";
+import './styles.css'
 
 const Product = () => {
     const { id } = useParams();
     const [error, setError] = useState(false);
-    const [results, setResults] = useState([])
+    const [results, setResults] = useState([]);
+    const [isMoving, setIsMoving] = useState(false);
     
     // SortFilter
     const [selectedSorting, setSelectedSorting] = useState("");
     const [selectedOrdering, setSelectedOrdering] = useState("asc");
     const [category, setCategory] = useState("");
     const [priceFilter, setPriceFilter] = useState({min: 0, max: 100});
+    const responsive = {
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 3,
+          slidesToSlide: 3
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2,
+          slidesToSlide: 2
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1,
+          slidesToSlide: 2
+        }
+      };
     
     const handleOnChangeSorting = (event) => {
         const [sort, order] = event.target.value.length? event.target.value.split("-") : ["", "asc"];
@@ -72,8 +94,6 @@ const Product = () => {
           <div className={Styles.container}>
             <h2>Product Price Options</h2>
               <Title title={category.title} subtitle={category.products_count} />
-
-              <Pagination setCurrentPage={setCurrentPage} currentPage={currentPage} hasNextPage={hasNextPage}/>
           </div>
           <div>
             <Form className="d-flex me-4 ms-4 mt-4" onSubmit={searchButton}>
@@ -86,13 +106,33 @@ const Product = () => {
                 />
                 <Button variant="outline-success" type='submit'>Search</Button>
             </Form>
-            <div role="alert" className="text-danger">{error && <p>{error}</p>}</div>
-            <Container>
-               {results && results.map(el => <Card img={el.img} link={el.link} source={el.source} title={el.title} price={el.price}/>)}      
-            </Container>            
+            <div role="alert" className="text-danger">{error && <p>{error}</p>}</div>                
           </div>
+          <Carousel
+            responsive={responsive}
+            
+            infinite={false}
+            beforeChange={() => setIsMoving(true)}
+            afterChange={() => setIsMoving(false )}
+            containerClass="first-carousel-container container"
+            deviceType={"mobile"}
+            >
+            {results.map(el => {
+                return <Card img={el.img} link={el.link} source={el.source} title={el.title} price={el.price} />;
+                })}
+          </Carousel>   
         </React.Fragment>
     );
 }
-
-export default Product;
+const styles = () => ({
+    root: {
+      textAlign: "center"
+    },
+    title: {
+      maxWidth: 400,
+      margin: "auto",
+      marginTop: 10
+    }
+  });
+// export default Product;
+export default withStyles(styles)(Product);
