@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes, Outlet, Navigate, Redirect, useParams } from 'react-router-dom';
-import Summary from './routes/summary';
-import Planner from './routes/planner';
+import Summary from './routes/sum';
+import Planner from './routes/limit';
 import Product from './routes/product';
 import Dashboard from './routes/dashboard';
 import Registration from './routes/registration';
