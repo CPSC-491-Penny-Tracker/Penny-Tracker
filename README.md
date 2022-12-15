@@ -1,2 +1,7 @@
 # Penny-Tracker
-create .env file and add "INLINE_RUNTIME_CHUNK=false"
+To install:  
+clone repository to local folder. 
+then build package with:  
+'npm run build'. 
+  
+After you will need to add the build folder into chrome extension.
