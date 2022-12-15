@@ -9,7 +9,7 @@ function card(props) {
       <div className="card-body">
           <h5 className="card-title" style={{fontSize: '13px'}}>{title}</h5>
           <p className="card-text" style={{fontSize: '12px'}}>{price}</p>
-          <a href={link} className="btn btn-primary">Go</a>
+          <button className="btn btn-primary">Go</button>
       </div>
       </div>
     </a>
