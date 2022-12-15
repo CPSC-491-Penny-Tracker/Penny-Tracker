@@ -1,7 +1,4 @@
 # Penny-Tracker
 To install:  
-clone repository to local folder. 
-then build package with:  
-'npm run build'. 
-  
-After you will need to add the build folder into chrome extension.
+Please Click and Download this link: https://drive.google.com/file/d/1KIupdHDlXb3BDktFKUOlXQMISq8LwVin
+
