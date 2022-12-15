@@ -14,7 +14,7 @@ export default function registration() {
         event.preventDefault();
         const { password, username } = event.target;
         
-        ApiService.postLogin({
+        ApiService.postUser({
             username: username.value,
             password: password.value
           })
