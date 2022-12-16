@@ -12,9 +12,9 @@ After the download:
 
 - Make sure developer mode is toggled on and click on "Load Unpacked" shown below:
 
-![image](https://user-images.githubusercontent.com/52415396/207817296-82b56852-20ca-4cf8-9360-bc273fbc85fb.png)
-
 ![image](https://user-images.githubusercontent.com/52415396/207992869-c2534dad-011a-45de-b02c-8d48a6b90b13.png)
+
+![image](https://user-images.githubusercontent.com/52415396/207817296-82b56852-20ca-4cf8-9360-bc273fbc85fb.png)
 
 - Locate and Select your extracted build file
 
